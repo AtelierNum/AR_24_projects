@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js">
+
+  </script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js">
+
+  </script>
+
+  <script defer>
+    // https://github.com/nikolaiwarner/aframe-chromakey-material
+    AFRAME.registerShader('chromakey', {
+      schema: {
+        src: {type: 'map'},
+        color: {default: {x: 0.0, y: 1.0, z: 0.0}, type: 'vec3', is: 'uniform'},
+        chroma: {type: 'bool', is: 'uniform'},
+        transparent: {default: true, is: 'uniform'}
+      },
+
+      init: function (data) {
+        const videoEl = data.src;
+        document.addEventListener('click', () => {
+          videoEl.play();
+
+          this.el.children[0].setAttribute('visible', false)
+          //console.log(this.el.children)
+        });
+
+        var videoTexture = new THREE.VideoTexture(data.src)
+        videoTexture.minFilter = THREE.LinearFilter
+        this.material = new THREE.ShaderMaterial({
+          uniforms: {
+            chroma: {
+              type: 'b',
+              value: data.chroma
+            },
+            color: {
+              type: 'c',
+              value: data.color
+            },
+            myTexture: {
+              type: 't',
+              value: videoTexture
+            }
+          },
+          vertexShader:
+            `
+            varying vec2 vUv;
+
+            void main(void)
+            {
+              vUv = uv;
+              vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+              gl_Position = projectionMatrix * mvPosition;
+            }
+          `
+          ,
+          fragmentShader:
+            `
+              uniform sampler2D myTexture;
+              uniform vec3 color;
+              uniform bool chroma;
+              varying vec2 vUv;
+
+              void main(void)
+              {
+                vec3 tColor = texture2D( myTexture, vUv ).rgb;
+                float a;
+                if(chroma == true){
+                   a = (length(tColor - color) - 0.5) * 7.0;
+                }
+                else {
+                  a = 1.0;
+                }
+
+                gl_FragColor = vec4(tColor, a);
+              }
+            `
+        })
+      },
+
+      update: function (data) {
+        this.material.color = data.color
+        this.material.src = data.src
+        this.material.transparent = data.transparent
+      },
+
+    })
+
+  </script>
+
+  <script defer>
+    AFRAME.registerComponent("audiohandler", {
+      init: function () {
+        this.trackedElements = document.querySelectorAll(
+          "a-marker[audiohandler]"
+        );
+      },
+      tick: function () {
+        this.trackedElements.forEach((marker) => {
+
+          const sound = document.querySelector(
+            marker.attributes.audioReference.value
+          );
+          if (marker.object3D.visible) {
+
+            if (sound.paused) {
+              sound.play();
+            }
+          } else {
+
+            if (!sound.paused) {
+              sound.pause();
+              sound.currentTime = 0;
+            }
+          }
+        });
+      },
+    });
+  </script>
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <a-scene embedded
+    arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; trackingMethod: best ; changeMatrixMode: modelViewMatrix; labelingMode:black_region;"
+    vr-mode-ui="enabled: false"
+    renderer="sortObjects: true; antialias: true; colorManagement: true; physicallyCorrectLights; logarithmicDepthBuffer: true;"
+    smooth=" true" smoothCount="5" smoothTolerance=".05" smoothThreshold="5" sourceWidth="800" sourceHeight="600"
+    displayWidth="1280" displayHeight="720">
+
+    <a-assets>
+      <img id="transparent_image" src="./assets/cadre 1.png">
+      <img id="transparent_image2" src="./assets/CADRE 2.png">
+      <img id="transparent_image3" src="./assets/CADRE 3.png">
+      <img id="transparent_image4" src="./assets/commode.png">
+      <img id="transparent_image5" src="./assets/fauteiom.png">
+      <img id="transparent_image6" src="./assets/plante.png">
+      <img id="transparent_image7" src="./assets/LAMPE A ANIMER EN MP4.png">
+
+      <video id="sun" src="assets/sunflowers.mp4" autoplay="true" loop="true" preload="auto" controls="true"
+        muted="true" playsinline="" webkit-playsinline=""></video>
+
+      <video id="lamp" src="assets/LAMPE A ANIMER EN MP4.mp4" autoplay="true" loop="true" preload="auto" controls="true"
+        muted="true" playsinline="" webkit-playsinline=""></video>
+
+      <audio id="sound1" src="assets/Piano Sound Effect.mp3" preload="auto"></audio>
+
+    </a-assets>
+
+
+    <a-marker type="barcode" value="14">
+      <a-image src="#transparent_image" position="0 .1 0" rotation="90 -90 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type="barcode" value="16">
+      <a-image src="#transparent_image2" position="0 .1 0" rotation="90 -90 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type="barcode" value="15">
+      <a-image src="#transparent_image3" position="0 .1 0" rotation="90 -90 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type="barcode" value="19">
+      <a-image src="#transparent_image4" position="0 .1 0" rotation="90 -90 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type="barcode" value="13">
+      <a-image src="#transparent_image5" position="0 .1 0" rotation="90 -90 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type="barcode" value="12">
+      <a-image src="#transparent_image6" position="0 .1 0" rotation="90 -90 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type="barcode" value="1">
+      <a-image src="#transparent_image7" position="0 .1 0" rotation="90 -90 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type="barcode" value="20">
+      <a-entity material="shader: chromakey; src: #sun; chroma:true; color: 0. 0. 0."
+        geometry="primitive: plane; width:  1; height:  1" position="0  0  0" rotation="270  0  0" side="double">
+        <a-text value="Click Me !" scale='1 1 1' position='-0.4 0 0'></a-text>
+      </a-entity>
+    </a-marker>
+
+    <a-marker audiohandler audioReference="#sound1" type="barcode" value="11" size="0.8">
+    </a-marker>
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+  </a-scene>
+
+</body>
+
+</html>
