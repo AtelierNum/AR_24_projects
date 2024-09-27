@@ -70,7 +70,7 @@ https://ateliernum.github.io/AR_24_projects/Paik/index.html
 # Neri Oxman
 by Alexei Nevenchanny and Amandin Guihard
 
-https://ateliernum.github.io/AR_24_projects/Oxman/index.html
+https://ateliernum.github.io/AR_24_projects/oxman/index.html
 
 
 
