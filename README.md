@@ -52,7 +52,6 @@ https://ateliernum.github.io/AR_24_projects/Mucha/
 </div>
 
 
-
 # Nam Jun Paik
 by Dahyun Kim and Paul Gautier
 
@@ -67,6 +66,20 @@ https://ateliernum.github.io/AR_24_projects/Paik/index.html
 </div>
 
 
+
+# Neri Oxman
+by Alexei Nevenchanny and Amandin Guihard
+
+https://ateliernum.github.io/AR_24_projects/Oxman/index.html
+
+
+
+<div align="center">
+<img  src="assets/Oxman.jpg" width="100%" height="auto"/>
+</div>
+<div align="center">
+<img  src="qrs/oxman.png" width="50%" height="auto"/>
+</div>
 
 
 
