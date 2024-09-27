@@ -39,5 +39,18 @@ https://ateliernum.github.io/AR_24_projects/Hopper/
 <img  src="qrs/Hopper.png" width="50%" height="auto"/>
 </div>
 
+# Alfons Mucha
+by Agathe Roblin and Clara Salgues
+
+https://ateliernum.github.io/AR_24_projects/Mucha/
+
+<div align="center">
+<img  src="assets/Mucha.jpg" width="100%" height="auto"/>
+</div>
+<div align="center">
+<img  src="qrs/Mucha.png" width="50%" height="auto"/>
+</div>
+
+
 
 

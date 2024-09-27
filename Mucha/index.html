@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Mucha</title>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js">
+
+  </script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js">
+
+  </script>
+</head>
+
+
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <a-scene embedded
+    arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; trackingMethod: best ; changeMatrixMode: modelViewMatrix;"
+    vr-mode-ui="enabled: false"
+    renderer="sortObjects: true; antialias: true; colorManagement: true; physicallyCorrectLights; logarithmicDepthBuffer: true;"
+    smooth=" true" smoothCount="5" smoothTolerance=".05" smoothThreshold="5" sourceWidth="800" sourceHeight="600"
+    displayWidth="1280" displayHeight="720">
+
+    <a-assets>
+      <img id="transparent_image" src="./assets/fondmcdonald.png">
+      <img id="portrait1" src="./assets/ornementationsfondmcdonald.png">
+      <img id="portrait2" src="./assets/femmemcdonald.png">
+      <img id="portrait3" src="./assets/textemcdonald.png">
+      <img id="portrait4" src="./assets/fonddior.png">
+      <img id="portrait5" src="./assets/ornementationsfonddior.png">
+      <img id="portrait6" src="./assets/femmedior.png">
+      <img id="portrait7" src="./assets/textedior.png">
+      <img id="portrait8" src="./assets/fondnike.png">
+      <img id="portrait9" src="./assets/ornementationsfondnike.png">
+      <img id="portrait10" src="./assets/femmenike.png">
+      <img id="portrait11" src="./assets/textenike.png">
+      <img id="portrait12" src="./assets/femmequinousaccueille.png">
+
+    </a-assets>
+
+
+    <a-marker type="barcode" value="0">
+
+      <a-image src="#transparent_image" position="0 .2 0" rotation="270 0 0" width="1" height="1.46"></a-image>
+
+
+      <a-image src="#portrait1" position="0 .4 0" rotation="270 0 0" width="1" height="1.46" opacity="0"
+        animation="property: opacity;from: 0; to: 1; loop: false; easing: linear; dur: 4000; delay:2000;">
+      </a-image>
+      <a-image src="#portrait2" position="0 .6 0" rotation="270 0 0" width="1" height="1.46" opacity="0"
+        animation="property: opacity;from: 0; to: 1; loop: false; easing: linear; dur: 4000; delay:4000;">
+      </a-image>
+      <a-image src="#portrait3" position="0 .8 0" rotation="270 0 0" width="1" height="1.46" opacity="0"
+        animation="property: opacity;from: 0; to: 1; loop: false; easing: linear; dur: 4000; delay:6000;">
+      </a-image>
+
+
+    </a-marker>
+
+
+    <a-marker type="barcode" value="1">
+
+      <a-image src="#portrait4" position="0 .2 0" rotation="270 0 0" width="1" height="1.46">
+      </a-image>
+      <a-image src="#portrait5" position="0 .4 0" rotation="270 0 0" width="1" height="1.46" opacity="0"
+        animation="property: opacity;from: 0; to: 1; loop: false; easing: linear; dur: 4000; delay:2000;">
+      </a-image>
+      <a-image src="#portrait6" position="0 .6 0" rotation="270 0 0" width="1" height="1.46" opacity="0"
+        animation="property: opacity;from: 0; to: 1; loop: false; easing: linear; dur: 4000; delay:4000;">
+      </a-image>
+      <a-image src="#portrait7" position="0 .8 0" rotation="270 0 0" width="1" height="1.46" opacity="0"
+        animation="property: opacity;from: 0; to: 1; loop: false; easing: linear; dur: 4000; delay:6000;">
+      </a-image>
+
+
+    </a-marker>
+
+
+
+    <a-marker type="barcode" value="2">
+
+      <a-image src="#portrait8" position="0 .2 0" rotation="270 0 0" width="1" height="1.46"></a-image>
+      <a-image src="#portrait9" position="0 .4 0" rotation="270 0 0" width="1" height="1.46" opacity="0"
+        animation="property: opacity;from: 0; to: 1; loop: false; easing: linear; dur: 4000; delay:2000;">
+      </a-image>
+      <a-image src="#portrait10" position="0 .6 0" rotation="270 0 0" width="1" height="1.46" opacity="0"
+        animation="property: opacity;from: 0; to: 1; loop: false; easing: linear; dur: 4000; delay:4000;">
+      </a-image>
+      <a-image src="#portrait11" position="0 .8 0" rotation="270 0 0" width="1" height="1.46" opacity="0"
+        animation="property: opacity;from: 0; to: 1; loop: false; easing: linear; dur: 4000; delay:6000;">
+
+      </a-image>
+
+
+    </a-marker>
+
+
+    <a-marker type="barcode" value="3">
+
+      <a-image src="#portrait12" position="0 .2 0" rotation="270 0 0" width="3" height="6"></a-image>
+
+    </a-marker>
+
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+  </a-scene>
+
+</body>
+
+</html>
