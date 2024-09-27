@@ -27,6 +27,17 @@ https://ateliernum.github.io/AR_24_projects/Basquiat/
 </div>
 
 
+# Edward Hopper
+by Gabriel Linz and Clarisse Dumas
+
+https://ateliernum.github.io/AR_24_projects/Hopper/
+
+<div align="center">
+<img  src="assets/Hopper.jpg" width="100%" height="auto"/>
+</div>
+<div align="center">
+<img  src="qrs/Hopper.png" width="50%" height="auto"/>
+</div>
 
 
 
