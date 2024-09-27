@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js">
+
+  </script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js">
+
+  </script>
+</head>
+
+
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene embedded
+    arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; labelingMode: white_region;'
+    renderer='precision: mediump;'>
+
+    <a-assets>
+      <img id="crackiswack" src="./assets/pattern1.webp">
+      <img id="RETROSPECTSilkscreen" src="./assets/unnamed.png">
+      <img id="IGNORANCE" src="./assets/2014_265_cropped.jpeg">
+       <img id="RADIANT" src="./assets/108_1_prints_multiples_june_2023_keith_haring_radiant_baby_from_the_icons_series__rago_auction.jpg">
+      <img id="SKATEUR" src="./assets/coloriage-keith-haring-1.webp">
+      <img id="3yeux" src="./assets/1.png">
+      <img id="Coeur" src="./assets/2.png">
+      <img id="Chien" src="./assets/3.png">
+      <img id="ange" src="./assets/5.png">
+      <img id="Double" src="./assets/6.png">
+    </a-assets>
+
+    <a-marker type='barcode' value='0'>
+      <a-image src="#crackiswack" rotation="270 0 0" width="3" height="2"></a-image>
+    </a-marker>
+    
+    <a-marker type='barcode' value='1'>
+      <a-image src="#RETROSPECTSilkscreen" rotation="270 0 0" width="3" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type='barcode' value='2'>
+      <a-image src="#IGNORANCE" rotation="270 0 0" width="3" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type='barcode' value='3'>
+      <a-image src="#RADIANT" rotation="270 0 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type='barcode' value='4'>
+      <a-image src="#SKATEUR" rotation="270 0 0" width="2.5" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type='barcode' value='5'>
+      <a-image src="#3yeux" rotation="270 0 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type='barcode' value='6'>
+      <a-image src="#Coeur" rotation="270 0 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type='barcode' value='7'>
+      <a-image src="#Chien" rotation="270 0 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type='barcode' value='8'>
+      <a-image src="#ange" rotation="270 0 0" width="2" height="2"></a-image>
+    </a-marker>
+
+    <a-marker type='barcode' value='9'>
+      <a-image src="#Double" rotation="270 0 0" width="2" height="2"></a-image>
+    </a-marker>
+    
+    <a-entity camera></a-entity>
+
+  </a-scene>
+
+
+</body>
+
+</html>
