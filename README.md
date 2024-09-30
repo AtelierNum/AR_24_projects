@@ -94,6 +94,20 @@ https://ateliernum.github.io/AR_24_projects/Norman/index.html
 <img  src="qrs/Norman.png" width="50%" height="auto"/>
 </div>
 
+# Albrecht Dürer 
+by Yujin Kim and Lena Van Maris
+
+https://ateliernum.github.io/AR_24_projects/Durer/index.html
+
+
+<div align="center">
+<img  src="assets/Durer.jpg" width="100%" height="auto"/>
+</div>
+<div align="center">
+<img  src="qrs/Durer.png" width="50%" height="auto"/>
+</div>
+
+
 
 
 
