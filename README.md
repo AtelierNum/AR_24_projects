@@ -107,6 +107,47 @@ https://ateliernum.github.io/AR_24_projects/Durer/index.html
 <img  src="qrs/Durer.png" width="50%" height="auto"/>
 </div>
 
+# Paul Rand 
+by Léonie morin and Lena Van Maris
+
+
+
+https://ateliernum.github.io/AR_24_projects/Rand/AIGA/index.html
+
+https://ateliernum.github.io/AR_24_projects/Rand/LOGOS/index.html
+
+https://ateliernum.github.io/AR_24_projects/Rand/NEXT/index.html
+
+
+<div align="center">
+<img  src="assets/Rand.jpg" width="100%" height="auto"/>
+</div>
+<div align="center">
+<img  src="qrs/RandIBM.png" width="33%" height="auto"/>
+</br>
+<a href="https://ateliernum.github.io/AR_24_projects/Rand/IBM/index.html">https://ateliernum.github.io/AR_24_projects/Rand/IBM/index.html</a>
+</div>
+
+<div align="center">
+<img  src="qrs/RandAIGA.png" width="33%" height="auto"/>
+</br>
+<a href="https://ateliernum.github.io/AR_24_projects/Rand/AIGA/index.html">https://ateliernum.github.io/AR_24_projects/Rand/AIGA/index.html</a>
+</div>
+
+<div align="center">
+<img  src="qrs/RandLOGOS.png" width="33%" height="auto"/>
+</br>
+<a href="https://ateliernum.github.io/AR_24_projects/Rand/LOGOS/index.html">https://ateliernum.github.io/AR_24_projects/Rand/LOGOS/index.html</a>
+</div>
+
+<div align="center">
+<img  src="qrs/RandNEXT.png" width="33%" height="auto"/>
+</br>
+<a href="https://ateliernum.github.io/AR_24_projects/Rand/NEXT/index.html">https://ateliernum.github.io/AR_24_projects/Rand/NEXT/index.html</a>
+</div>
+
+
+
 
 
 
