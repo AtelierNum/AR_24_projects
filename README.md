@@ -81,6 +81,20 @@ https://ateliernum.github.io/AR_24_projects/oxman/index.html
 <img  src="qrs/oxman.png" width="50%" height="auto"/>
 </div>
 
+# Don Norman 
+by Clemente Bobillier Ruff and Kaisey Deloso
+
+https://ateliernum.github.io/AR_24_projects/Norman/index.html
+
+
+<div align="center">
+<img  src="assets/Norman.jpg" width="100%" height="auto"/>
+</div>
+<div align="center">
+<img  src="qrs/Norman.png" width="50%" height="auto"/>
+</div>
+
+
 
 
 
