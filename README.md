@@ -108,7 +108,7 @@ https://ateliernum.github.io/AR_24_projects/Durer/index.html
 </div>
 
 # Paul Rand 
-by Léonie morin and Lena Van Maris
+by Léonie morin and Maxence Vuillefroy de Silly
 
 
 
